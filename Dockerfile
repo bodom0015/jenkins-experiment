@@ -2,6 +2,7 @@ FROM jenkins:1.651.3-alpine
 
 USER root
 
+RUN apk add --update docker
 
 #RUN apt-get update \
 #      && apt-get install -y docker.io \
