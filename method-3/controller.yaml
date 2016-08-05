@@ -13,21 +13,23 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: ndslabs/jenkins:latest
+        image: ndslabs/jenkins:dind
         ports:
         - containerPort: 8080
           protocol: TCP
         - containerPort: 50000
           protocol: TCP
+        securityContext:
+          privileged: true
         volumeMounts:
-        - mountPath: /var/jenkins-home
+        - mountPath: /var/jenkins_home
           name: jenkins
-        - mountPath: /var/run/docker.sock
-          name: dockersock
+#        - mountPath: /var/run/docker.sock
+#          name: dockersock
       volumes:
+#      - hostPath:
+#          path: /var/run/docker.sock
+#        name: dockersock
       - hostPath:
-          path: /var/run/docker.sock
-        name: dockersock
-      - hostPath:
-          path: /var/jenkins-home
+          path: /var/jenkins_home
         name: jenkins

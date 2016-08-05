@@ -8,9 +8,9 @@
     "requiresVolume": false,
     "image": {
         "registry": "",
-        "name": "jenkins",
+        "name": "ndslabs/jenkins",
         "tags": [
-            "1.651.3-alpine",
+            "dind",
             "1.651.3",
             "latest"
         ]
@@ -41,11 +41,7 @@
     },
     "volumeMounts": [
         {
-            "mountPath": "/var/run/docker.sock",
-            "name": "dockersock"
-        },
-        {
-            "mountPath": "/var/jenkins-home",
+            "mountPath": "/var/jenkins_home",
             "name": "jenkins"
         }
     ],
