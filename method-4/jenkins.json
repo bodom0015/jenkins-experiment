@@ -41,8 +41,8 @@
     },
     "volumeMounts": [
         {
-            "mountPath": "/tmp/docker.sock",
-            "name": "docker"
+            "mountPath": "/var/run/docker.sock",
+            "name": "dockersock"
         },
         {
             "mountPath": "/var/jenkins-home",
