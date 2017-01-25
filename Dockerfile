@@ -13,8 +13,8 @@ RUN apk add --no-cache \
         xz
 
 ENV DOCKER_BUCKET get.docker.com
-ENV DOCKER_VERSION 1.12.0
-ENV DOCKER_SHA256 3dd07f65ea4a7b4c8829f311ab0213bca9ac551b5b24706f3e79a97e22097f8b
+ENV DOCKER_VERSION 1.12.6
+ENV DOCKER_SHA256 cadc6025c841e034506703a06cf54204e51d0cadfae4bae62628ac648d82efdd
 
 RUN set -x \
     && curl -fSL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-${DOCKER_VERSION}.tgz" -o docker.tgz \
