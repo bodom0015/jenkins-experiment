@@ -1,5 +1,5 @@
 # NDS Labs Jenkins CI
-NDS Labs Docker-in-Docker image for [Jenkins CI|https://jenkins.io/]
+NDS Labs Docker-in-Docker image for [Jenkins CI](https://jenkins.io/)
 
 # Building the Image
 ```bash
@@ -74,10 +74,6 @@ spec:
         name: jenkins
 ```
 
-# Test Case
-* Start Jenkins using one of the methods below
-* Create a new Freestyle Job
-* Set SCM type to "Git" and point at this Git repository
-* Add a build step of "Execute shell" for `docker build -t ndslabs/jenkins .`
-* Click Apply/Save, then build the new job
-* Watch the console output to see your build
+## See also
+* https://github.com/nds-org/ndslabs
+* https://github.com/nds-org/ndslabs-specs
